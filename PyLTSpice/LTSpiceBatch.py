@@ -35,8 +35,12 @@ logging.basicConfig(filename='LTSpiceBatch.log', level=logging.INFO)
 
 
 LTspiceIV_exe = [r"C:\Program Files (x86)\LTC\LTspiceIV\scad3.exe"]
-LTspiceXVII_exe = [r"C:\Program Files\LTC\LTspiceXVII\XVIIx64.exe"]
-LTspice_arg = {'netlist': ['-netlist'], 'run': ['-b', '-Run']}
+if(sys.platform == "darwin"):
+    LTspiceXVII_exe = [r"/Applications/LTspice.app/Contents/MacOS/LTspice"]
+    LTspice_arg = {'netlist': ['-netlist'], 'run': ['-b']}
+else:
+    LTspiceXVII_exe = [r"C:\Program Files\LTC\LTspiceXVII\XVIIx64.exe"]
+    LTspice_arg = {'netlist': ['-netlist'], 'run': ['-b', '-Run']}
 
 cmdline_switches = []
 
