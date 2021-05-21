@@ -20,7 +20,7 @@ __copyright__ = "Copyright 2020, Fribourg Switzerland"
 END_LINE_TERM = '\n'
 
 # A Spice netlist can only have one of the instructions below, otherwise an error will be raised
-UNIQUE_SIMULATION_DOT_instructionS = ('.AC', '.DC', '.TRAN', 'NOISE', '.DC', '.TF')
+UNIQUE_SIMULATION_DOT_instructionS = ('.AC', '.DC', '.TRAN', '.NOISE', '.DC', '.TF')
 
 REPLACE_REGXES = {
     'B': r"^(B[VI]\w+)(\s+[\w\+\-]+){2}\s+(?P<value>.*)$",  # Behavioral source
