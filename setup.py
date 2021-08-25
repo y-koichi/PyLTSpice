@@ -6,13 +6,13 @@ with open("README.md", "r") as fh:
 setuptools.setup(
     name='PyLTSpice',
     version='1.1',
-    scripts=['PyLTSpice\\__init__.py'
+    #scripts=['PyLTSpice\\__init__.py'
              # 'PyLTSpice\\Histogram.py',
              # 'PyLTSpice\\LTSpice_RawRead.py',
              # 'PyLTSpice\\LTSpiceBatch.py',
              # 'PyLTSpice\\LTSteps.py',
              # 'PyLTSpice\\sketch.py'
-             ],
+    #         ],
     # install_requires = [],
     author="Nuno Brum",
     author_email="me@nunobrum.com",
