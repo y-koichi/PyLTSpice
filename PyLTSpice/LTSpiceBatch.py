@@ -31,7 +31,7 @@ __all__ = ('LTCommander', 'SimCommander', 'cmdline_switches')
 
 END_LINE_TERM = '\n'
 
-logging.basicConfig(filename=os.path.dirname(__file__)+'LTSpiceBatch.log', level=logging.INFO)
+logging.basicConfig(filename='LTSpiceBatch.log', level=logging.INFO)
 
 
 LTspiceIV_exe = [r"C:\Program Files (x86)\LTC\LTspiceIV\scad3.exe"]
