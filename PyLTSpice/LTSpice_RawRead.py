@@ -339,7 +339,7 @@ class LTSpiceRawRead(object):
             self.block_size = (raw_file_size - self.binary_start) // self.nPoints
             self.data_size = self.block_size // self.nVariables
             if "fastaccess" in self.raw_params["Flags"]:
-                print("Fast access")
+                # print("Fast access")
                 # A fast access means that the traces are grouped together.
                 for var in self._traces:
                     if isinstance(var, DummyTrace):
@@ -360,7 +360,7 @@ class LTSpiceRawRead(object):
                                 var.set_pointB4(point, value)
 
             else:
-                print("Normal access")
+                # print("Normal access")
                 # This is the default save after a simulation where the traces are scattered
                 if self.data_size == 8:
                     for point in range(self.nPoints):
